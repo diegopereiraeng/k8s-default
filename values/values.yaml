@@ -1,6 +1,8 @@
 name: <+pipeline.variables.serviceName>
 replicas: 1
 
+sitePath: <+pipeline.variables.serviceName>
+
 image: <+artifact.image>
 dockercfg: <+artifact.imagePullSecret>
 
