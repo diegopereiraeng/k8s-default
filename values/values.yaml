@@ -23,6 +23,10 @@ serviceTargetPort: 3000
 # The following two maps, config and secrets, are put into a ConfigMap
 # and a Secret, respectively.
 # Both are added to the container environment in podSpec as envFrom source.
+EnvsConfigMap:
+  MONGOURL: <+service.variables.MONGOURL>
+  DIEGO: "SE"
+
 env:
   config:
     STABLE_ENDPOINT: ${serviceVariable.stableEndpoint}
