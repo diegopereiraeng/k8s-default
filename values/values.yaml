@@ -1,7 +1,7 @@
-name: <+pipeline.variables.serviceName>
+name: <+pipeline.variables.serviceName>-<+infra.namespace>
 replicas: 1
 
-sitePath: <+pipeline.variables.serviceName>
+sitePath: <+pipeline.variables.serviceName>-<+infra.namespace>
 
 image: <+artifact.image>
 dockercfg: <+artifact.imagePullSecret>
