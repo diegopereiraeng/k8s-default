@@ -29,19 +29,6 @@ EnvsConfigMap:
 
 env:
   config:
-    STABLE_ENDPOINT: ${serviceVariable.stableEndpoint}
-    CANARY_ENDPOINT: ${serviceVariable.canaryEndpoint}
-    LOG_CONFIG_LABELS: |-
-      {
-        logsPerMinute: "Logs per minute",
-        errorRate: "Error rate (%)",
-        errorMessage: "Error message"
-      }
-    METRIC_CONFIG_LABELS: |-
-      {
-        callsPerMinute: "Calls per minute",
-        errorRate: "Error rate (%)",
-        minErrorValue: "Error value min",
-        maxErrorValue: "Error value max",
-        shouldDoDelayedCalls: "Delayed calls enabled"
-      }
+    MONGOURL: <+pipeline.stages.DeployDevCustomer.spec.serviceConfig.serviceDefinition.spec.variables.MONGOURL>
+    DIEGO: "SE"
+
