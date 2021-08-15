@@ -18,7 +18,7 @@ serviceType: ClusterIP
 # targetPort is where application is listening on inside the container.
 servicePort: 80
 serviceTargetPort: 3000
-
+checkHealth: false
 # Specify all environment variables to be added to the container.
 # The following two maps, config and secrets, are put into a ConfigMap
 # and a Secret, respectively.
