@@ -26,9 +26,11 @@ checkHealth: false
 EnvsConfigMap:
   MONGOURL: <+pipeline.stages.DeployDevCustomer.spec.serviceConfig.serviceDefinition.spec.variables.MONGOURL>
   DIEGO: "SE"
+  SERVICE_NAME: <+pipeline.variables.serviceName>-<+infra.namespace>
 
 env:
   config:
     MONGOURL: <+pipeline.stages.DeployDevCustomer.spec.serviceConfig.serviceDefinition.spec.variables.MONGOURL>
     DIEGO: "SE"
+    SERVICE_NAME: <+pipeline.variables.serviceName>-<+infra.namespace>
 
